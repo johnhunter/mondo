@@ -5,6 +5,10 @@
   "author": "john@johnhunter.info",
   "license": "ISC",
   "type": "module",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "npm run dev",
     "dev": "vite",
@@ -17,6 +21,8 @@
     "e2e-ui": "npx playwright test --ui"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.12.0",
+    "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.3.1",
     "typescript": "^5.5.3",
@@ -39,7 +45,9 @@
     "jsdom": "^24.1.0",
     "prettier": "^3.3.2",
     "vite": "^5.3.3",
-    "vitest": "^1.2.2"
+    "vitest": "^1.2.2",
+    "@tanstack/react-query-devtools": "^4.29.0",
+    "msw": "^1.2.1"
   },
   "browserslist": {
     "production": [
