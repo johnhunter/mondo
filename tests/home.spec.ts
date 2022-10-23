@@ -7,9 +7,11 @@ test.describe('Home page', () => {
     await expect(page).toHaveTitle(/^Mondo$/);
   });
 
-  test('has the App', async ({ page }) => {
+  test('has the App heading', async ({ page }) => {
     await page.goto('/');
 
-    await expect(page.getByTestId('app')).toBeInViewport();
+    await expect(page.getByRole('heading', { name: 'Posts' })).toBeInViewport();
   });
+
+  // TODO: more tests and add mocking
 });
