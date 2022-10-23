@@ -1,0 +1,19 @@
+.title {
+  font-size: 2rem;
+}
+.title::first-letter {
+  text-transform: uppercase;
+}
+
+.body {
+  margin: 2rem 1rem;
+  line-height: 1.5;
+}
+.body::first-line {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.backBtn::before {
+  content: '← '
+}
