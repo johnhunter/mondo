@@ -1,14 +1,14 @@
-import React from 'react';
+import { useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import css from './App.module.css';
-import Posts from '../Posts';
-import Post from '../Post';
+import Posts from './components/Posts';
+import Post from './components/Post';
 
 const queryClient = new QueryClient();
 
 const App = () => {
-  const [postId, setPostId] = React.useState(null);
+  const [postId, setPostId] = useState<number | null>(null);
 
   return (
     <QueryClientProvider client={queryClient}>

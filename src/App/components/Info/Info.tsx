@@ -1,24 +1,30 @@
-import React from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import classNames from 'classnames';
 import css from './Info.module.css';
 
-const Info = ({ active = true, transient, error, children }) => {
+interface InfoProps {
+  active?: boolean;
+  transient?: boolean;
+  error?: boolean;
+  children?: ReactNode;
+}
+
+const Info: FC<InfoProps> = ({ active = true, transient, error, children }) => {
   if (!active) {
     return null;
   }
 
-  const attrs = {};
+  const attrs = {} as HTMLAttributes<HTMLDivElement>;
 
   if (error) {
     attrs.role = 'alert';
   }
   if (transient) {
-    attrs['aria-live'] = 'polite';
+    attrs.role = 'status';
   }
 
   return (
     <div
-      open
       className={classNames(
         css.box,
         transient && css.transient,
