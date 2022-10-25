@@ -6,5 +6,5 @@ A lighter alternative to Create React App using [Vite](https://vitejs.dev/) for 
 
 More complete templates will be created as branches.
 
-- [TypeScript](/johnhunter/mondo/tree/TypeScript)
-- [react-query](/johnhunter/mondo/tree/react-query)
+- [TypeScript](https://github.com/johnhunter/mondo/tree/TypeScript)
+- [react-query](https://github.com/johnhunter/mondo/tree/react-query)
