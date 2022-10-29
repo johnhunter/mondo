@@ -18,11 +18,17 @@
     "classnames": "^2.3.2",
     "ky": "^0.31.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "typescript": "^4.8.4",
+    "vite-tsconfig-paths": "^3.5.2"
   },
   "devDependencies": {
+    "@tanstack/react-query-devtools": "^4.12.0",
+    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
     "@vitejs/plugin-react": "^2.0.0",
+    "@vitest/ui": "^0.24.3",
     "vite": "^3.0.0",
     "vitest": "^0.24.3"
   },
