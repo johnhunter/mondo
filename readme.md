@@ -6,5 +6,8 @@ A lighter alternative to Create React App using [Vite](https://vitejs.dev/) for 
 
 More complete templates will be created as branches.
 
-- [TypeScript](https://github.com/johnhunter/mondo/tree/TypeScript)
-- [react-query](https://github.com/johnhunter/mondo/tree/react-query)
+## React-query
+
+An implementation with [react-query](https://tanstack.com/query/v4) for data fetching. [Ky](https://github.com/sindresorhus/ky#readme) for fetching and [msw](https://mswjs.io/) for api mocking. _Note we use Ky-universal so tests will have the necessary Node fetch polyfills._
+
+

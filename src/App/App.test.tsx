@@ -1,4 +1,8 @@
-import { render, screen } from '@testing-library/react';
+import {
+  render,
+  screen,
+  waitForElementToBeRemoved,
+} from '@testing-library/react';
 
 import App from './App';
 
@@ -10,5 +14,17 @@ describe('App', () => {
 
     // Verify css module className
     expect(container.querySelector('.container')).toBeTruthy();
+  });
+
+  test('Loads the posts list', async () => {
+    render(<App />);
+
+    await waitForElementToBeRemoved(() => screen.queryByRole('status'));
+
+    const links = screen.getAllByRole('link');
+    expect(links.map((link) => link.textContent)).toEqual([
+      'test title 1',
+      'test title 2',
+    ]);
   });
 });

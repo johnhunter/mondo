@@ -1,12 +1,10 @@
-import ky from 'ky';
+import ky from 'ky-universal';
 import { useQuery } from '@tanstack/react-query';
 import type { PostData, Error } from './types';
 
-const prefixUrl = 'https://jsonplaceholder.typicode.com/';
+export const API_ROOT = 'https://jsonplaceholder.typicode.com/';
 
-// TODO: how to mock in tests - look into serice-worker mocking
-
-const api = ky.extend({ prefixUrl });
+const api = ky.extend({ prefixUrl: API_ROOT });
 
 export const fetchPosts = () =>
   useQuery(['posts'], async () => api.get('posts').json<PostData[]>());
