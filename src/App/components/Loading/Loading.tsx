@@ -10,19 +10,19 @@ interface LoadingProps {
 
 const Loading: FC<LoadingProps> = ({ status, error, children }) => {
   switch (status) {
+    case 'success':
+      return <>{children}</>;
     case 'loading': {
       return <Info transient>Loading</Info>;
     }
-    case 'error': {
+    case 'error':
+    default: {
       return (
         <Info error>
           Error: {error?.message || 'an unknown error occurred'}
         </Info>
       );
     }
-    case 'success':
-    default:
-      return <>{children}</>;
   }
 };
 
