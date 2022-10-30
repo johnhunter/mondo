@@ -2,7 +2,7 @@ import { rest } from 'msw';
 import { API_ROOT } from '../api/api';
 import { posts, postById } from './data';
 
-const url = (route: string) => `${API_ROOT}${route}`;
+export const url = (route: string) => `${API_ROOT}${route}`;
 
 export const handlers = [
   rest.get(url('posts'), (req, res, ctx) => {
