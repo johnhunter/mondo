@@ -3,8 +3,11 @@ import {
   screen,
   waitForElementToBeRemoved,
 } from '@testing-library/react';
-
+import { posts } from '@/mocks/data';
 import App from './App';
+import type { PostData } from '@/types';
+
+const testTitles = posts(2).map((p: PostData) => p.title);
 
 describe('App', () => {
   test('renders App component', () => {
@@ -22,9 +25,6 @@ describe('App', () => {
     await waitForElementToBeRemoved(() => screen.queryByRole('status'));
 
     const links = screen.getAllByRole('link');
-    expect(links.map((link) => link.textContent)).toEqual([
-      'test title 1',
-      'test title 2',
-    ]);
+    expect(links.map((link) => link.textContent)).toEqual(testTitles);
   });
 });

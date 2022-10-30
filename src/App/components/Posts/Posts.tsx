@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import classNames from 'classnames';
 import { useQueryClient } from '@tanstack/react-query';
-import { fetchPosts } from '../../../api';
 import css from './Posts.module.css';
 import Info from '../Info';
 import Loading from '../Loading';
+import useData from './useData';
 
 interface PostsProps {
   setPostId: (id: number | null) => void;
@@ -12,7 +12,7 @@ interface PostsProps {
 
 const Posts: FC<PostsProps> = ({ setPostId }) => {
   const queryClient = useQueryClient();
-  const { status, data = [], error, isFetching } = fetchPosts();
+  const { status, data = [], error, isFetching } = useData();
 
   return (
     <div>

@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { fetchPost } from '../../../api';
 import css from './Post.module.css';
 import Info from '../Info';
 import Loading from '../Loading';
+import useData from './useData';
 
 interface PostProps {
   postId: number;
@@ -10,8 +10,8 @@ interface PostProps {
 }
 
 const Post: FC<PostProps> = ({ postId, setPostId }) => {
-  const { status, data, error, isFetching } = fetchPost(postId);
-  const { title, body } = data!;
+  const { status, data, error, isFetching } = useData(postId);
+  const { title, body } = data ?? {};
 
   return (
     <div>
