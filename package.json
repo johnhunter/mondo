@@ -13,18 +13,18 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.8.4",
-    "vite-tsconfig-paths": "^3.5.2"
+    "typescript": "^5.0.4",
+    "vite-tsconfig-paths": "^4.0.8"
   },
   "devDependencies": {
-    "@tanstack/react-query-devtools": "^4.12.0",
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
-    "@vitejs/plugin-react": "^2.0.0",
-    "@vitest/ui": "^0.24.3",
-    "vite": "^3.0.0",
-    "vitest": "^0.24.3"
+    "@vitejs/plugin-react": "^3.1.0",
+    "@vitest/ui": "^0.29.8",
+    "jsdom": "^21.1.1",
+    "vite": "^4.2.1",
+    "vitest": "^0.29.8"
   },
   "browserslist": {
     "production": [
