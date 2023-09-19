@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      patches:
+        update-types:
+          - 'patch'
+      minor-lint-build-test:
+        update-types:
+          - 'minor'
+        patterns:
+          - 'prettier'
+          - 'eslint*'
+          - 'vite*'
+          - '@vite*'
+          - '@testing-library/*'
+          - 'jsdom'
