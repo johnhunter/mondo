@@ -5,10 +5,12 @@
   "author": "john@johnhunter.info",
   "license": "ISC",
   "scripts": {
+    "start": "npm run dev",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "test-ui": "npm run test -- --ui"
   },
   "dependencies": {
     "react": "^18.2.0",

@@ -13,3 +13,10 @@ More complete templates will be created as branches.
 ### Node
 
 The local environment assumes `node@18`. You can use any Node version manager that uses the `.nvmrc` configuration file (we recommend [fnm](https://fnm.vercel.app/)).
+
+## Npm scripts
+
+- `npm start` starts the dev HMR environment on http://localhost:5173
+- `npm test` runs the tests (will watch in a dev environment)
+- `npm run preview` performs a production build and starts a web server on http://localhost:4173/
+- `npm run test-ui` runs the tests, reporting in the console as well as opening the test UI interface in [`http://localhost:51204/__vitest__/`](http://localhost:51204/__vitest__/)
