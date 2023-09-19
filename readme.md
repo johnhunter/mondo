@@ -6,5 +6,10 @@ A lighter alternative to Create React App using [Vite](https://vitejs.dev/) for 
 
 More complete templates will be created as branches.
 
-- [TypeScript](https://github.com/johnhunter/mondo/tree/TypeScript)
 - [react-query](https://github.com/johnhunter/mondo/tree/react-query)
+
+## Prerequisites
+
+### Node
+
+The local environment assumes `node@18`. You can use any Node version manager that uses the `.nvmrc` configuration file (we recommend [fnm](https://fnm.vercel.app/)).
