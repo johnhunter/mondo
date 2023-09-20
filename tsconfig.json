@@ -20,6 +20,7 @@
     "noImplicitReturns": true,
     "stripInternal": true,
     "traceResolution": false, // for debugging only
+    "types": [],
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
@@ -27,5 +28,5 @@
     }
   },
   "exclude": ["node-modules", "dist"],
-  "include": ["src", "**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", ".eslintrc.json"]
 }
