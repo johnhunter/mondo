@@ -18,7 +18,8 @@
     "test": "vitest",
     "test-ui": "npm run test -- --ui",
     "e2e": "npx playwright test",
-    "e2e-ui": "npx playwright test --ui"
+    "e2e-ui": "npx playwright test --ui",
+    "e2e-record": "npx playwright codegen"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.12.0",
