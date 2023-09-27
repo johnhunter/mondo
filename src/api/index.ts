@@ -1,1 +1,2 @@
-export { API_ROOT, fetch, getJson, type HttpError } from './api';
+export { API_ROOT, fetch, getJson } from './api';
+export { default as HttpError } from './HttpError';
