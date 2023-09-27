@@ -1,4 +1,5 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from './msw-fixture';
+import { posts } from '@/mocks/data';
 
 test.describe('Home page', () => {
   test('has title', async ({ page }) => {
@@ -15,10 +16,8 @@ test.describe('Home page', () => {
   });
 
   test('has a link to a post', async ({ page }) => {
-    // TODO: use mocked data rather than external API
-    const name =
-      'sunt aut facere repellat provident occaecati excepturi optio reprehenderit';
-    const length = 100;
+    const postsData = posts();
+    const name = postsData[0].title;
 
     await page.goto('/');
 
@@ -27,7 +26,7 @@ test.describe('Home page', () => {
       name,
     });
 
-    await expect(list.getByRole('link')).toHaveCount(length);
+    await expect(list.getByRole('link')).toHaveCount(postsData.length);
     await expect(thePost).toBeInViewport();
 
     await thePost.click();
