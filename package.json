@@ -48,7 +48,7 @@
     "vite": "^5.3.3",
     "vitest": "^1.2.2",
     "@tanstack/react-query-devtools": "^4.29.0",
-    "msw": "^1.2.1"
+    "playwright-msw": "^2.2.1"
   },
   "browserslist": {
     "production": [
