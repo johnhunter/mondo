@@ -5,6 +5,7 @@ import css from './Posts.module.css';
 import Info from '../Info';
 import Loading from '../Loading';
 import useData from './useData';
+import { PostData } from '@/types';
 
 interface PostsProps {
   setPostId: (id: number | null) => void;
@@ -25,7 +26,7 @@ const Posts: FC<PostsProps> = ({ setPostId }) => {
             Background Updating
           </Info>
           <ul className={css.list}>
-            {data.map(({ id, title }) => (
+            {data.map(({ id, title }: PostData) => (
               <li key={id}>
                 <a
                   href="#"
