@@ -45,6 +45,7 @@
     "eslint-plugin-react": "^7.33.2",
     "jsdom": "^22.1.0",
     "msw": "^1.2.1",
+    "playwright-msw": "^2.2.1",
     "prettier": "^3.0.3",
     "vite": "^4.2.1",
     "vitest": "^0.34.5"
