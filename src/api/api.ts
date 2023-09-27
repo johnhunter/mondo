@@ -1,8 +1,6 @@
+import HttpError from './HttpError';
+
 export const API_ROOT = 'https://jsonplaceholder.typicode.com/';
-export type HttpError = Partial<Response> & {
-  status: number;
-  statusText: string;
-};
 
 type FetchArgs = Parameters<typeof globalThis.fetch>;
 
@@ -12,7 +10,7 @@ type FetchArgs = Parameters<typeof globalThis.fetch>;
 export const fetch = async <RData = unknown>(
   input: FetchArgs[0],
   init: FetchArgs[1] = {},
-) => {
+): Promise<RData> => {
   const initWithDefaults = {
     ...init,
 
@@ -26,18 +24,15 @@ export const fetch = async <RData = unknown>(
     res = await globalThis.fetch(input, initWithDefaults);
     resJson = (await res.json()) as RData;
   } catch (err: unknown) {
-    const status = 0;
-    const statusText: string =
-      (err as Error)?.message || 'Failed to fetch (unknown error)';
-    return Promise.reject<HttpError>({ status, statusText });
+    throw new HttpError(undefined, { cause: err as Error });
   }
 
   if (res.ok) {
     return resJson;
   } else {
-    return Promise.reject<HttpError>(res);
+    throw new HttpError(res);
   }
 };
 
-export const getJson = <RData = unknown>(path: string) =>
+export const getJson = <RData = unknown>(path: string): Promise<RData> =>
   fetch<RData>(`${API_ROOT}${path}`);

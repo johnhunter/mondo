@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import type { PostData } from '@/types';
-import { getJson } from '@/api';
+import { getJson, HttpError } from '@/api';
 
 const useData = () =>
-  useQuery<PostData[], Error>(['posts'], async () =>
+  useQuery<PostData[], HttpError, PostData[]>(['posts'], async () =>
     getJson<PostData[]>('posts'),
   );
 

@@ -1,10 +1,10 @@
 import { FC, ReactNode } from 'react';
 import Info from '../Info';
-import type { Status, Error } from '@/types';
+import type { Status, HttpError } from '@/types';
 
 interface LoadingProps {
   status: Status;
-  error: Error | null;
+  error: HttpError | null;
   children: ReactNode;
 }
 

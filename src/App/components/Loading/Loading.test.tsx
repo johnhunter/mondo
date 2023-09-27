@@ -19,9 +19,9 @@ describe('Loading', () => {
   });
 
   test('Displays given error', () => {
-    const message = 'given error';
+    const error = { name: 'HttpError', message: 'given error', status: 0 };
     render(
-      <Loading status="error" error={{ message }}>
+      <Loading status="error" error={error}>
         {children}
       </Loading>,
     );
