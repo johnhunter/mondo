@@ -14,7 +14,11 @@ updates:
         patterns:
           - 'prettier'
           - 'eslint*'
+          - '@typescript-eslint/*'
           - 'vite*'
           - '@vite*'
           - '@testing-library/*'
           - 'jsdom'
+      typescript-eslint:
+        patterns:
+          - '@typescript-eslint/*'
