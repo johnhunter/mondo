@@ -1,0 +1,19 @@
+.list > li {
+  margin: 1rem 0;
+}
+.list > li::first-letter {
+  text-transform: uppercase;
+}
+
+.itemLink {
+  text-decoration: none;
+  color: inherit;
+}
+.itemLink:hover {
+  text-decoration: underline;
+}
+
+.cached {
+  font-weight: bold;
+  color: green;
+}
