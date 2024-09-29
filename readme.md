@@ -2,6 +2,20 @@
 
 A simple react template.
 
+---
+
+**Note**
+This template is less relevant as much of the tooling included has its own scaffolding
+
+- https://vitejs.dev/guide/#scaffolding-your-first-vite-project
+- https://eslint.org/docs/latest/use/getting-started
+- https://prettier.io/docs/en/integrating-with-linters.html
+- https://vitest.dev/guide/#adding-vitest-to-your-project
+- https://testing-library.com/docs/react-testing-library/setup
+- https://playwright.dev/docs/intro#installing-playwright
+
+---
+
 A lighter alternative to Create React App using [Vite](https://vitejs.dev/) for its leverage of ES module support in the browser and convention based approach. Testing uses [Testing Library](https://testing-library.com/) and [Vitest](https://vitest.dev/).
 
 More complete templates will be created as branches.
